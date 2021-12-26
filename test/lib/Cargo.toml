@@ -1,0 +1,19 @@
+[package]
+name = "my_lib"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["staticlib"]
+
+[dependencies]
+rand_core = "0.4.2"
+#tempfile = "3"
+#serde = { version = "1.0.130", features = ["derive"] }
+#rmp-serde = "0.15.5"
+
+[package.metadata.raze]
+workspace_path = "//test/lib/cargo"
+gen_workspace_prefix = "lib"
+genmode = "Remote"
+package_aliases_dir = "cargo"
